@@ -37,6 +37,18 @@
             <groupId>com.kumuluz.ee</groupId>
             <artifactId>kumuluzee-json-b-yasson</artifactId>
         </dependency>
+
+        <!-- JSON-P for JSON processing -->
+        <dependency>
+            <groupId>com.kumuluz.ee</groupId>
+            <artifactId>kumuluzee-json-p-jsonp</artifactId>
+        </dependency>
+
+        <!-- Jetty servlet -->
+        <dependency>
+            <groupId>com.kumuluz.ee</groupId>
+            <artifactId>kumuluzee-servlet-jetty</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
