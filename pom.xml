@@ -33,10 +33,10 @@
         </dependency>
 
         <!-- JSON-B for JSON binding -->
-        <!-- <dependency>
+        <dependency>
             <groupId>com.kumuluz.ee</groupId>
             <artifactId>kumuluzee-json-b-yasson</artifactId>
-        </dependency> -->
+        </dependency>
     </dependencies>
 
     <build>
