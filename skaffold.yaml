@@ -29,8 +29,8 @@ portForward:
   - resourceType: service
     resourceName: peaks-hikes-service-nodeport
     namespace: dev
-    port: 8085
-    localPort: 8085
+    port: 8082
+    localPort: 8082
 profiles:
   - name: minikube
     activation:
