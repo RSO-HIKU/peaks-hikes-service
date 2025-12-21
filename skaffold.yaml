@@ -1,0 +1,37 @@
+apiVersion: skaffold/v4beta8
+kind: Config
+metadata:
+  name: peaks-hikes-service
+build:
+  local:
+    push: false
+  tagPolicy:
+    sha256: {}
+  artifacts:
+    - image: peaks-hikes-service
+      context: .
+      docker:
+        dockerfile: Dockerfile
+deploy:
+  helm:
+    releases:
+      - name: peaks-hikes-service
+        chartPath: helm
+        namespace: dev
+        createNamespace: true
+        valuesFiles:
+          - helm/values-dev.yaml
+        setValueTemplates:
+          image.repository: "{{.IMAGE_REPO_peaks_hikes_service}}"
+          image.tag: "{{.IMAGE_TAG_peaks_hikes_service}}"
+        wait: true
+portForward:
+  - resourceType: service
+    resourceName: peaks-hikes-service-nodeport
+    namespace: dev
+    port: 8085
+    localPort: 8085
+profiles:
+  - name: minikube
+    activation:
+      - kubeContext: minikube
