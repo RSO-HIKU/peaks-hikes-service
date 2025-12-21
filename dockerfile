@@ -1,5 +1,17 @@
+# Build stage
+FROM maven:3.9-eclipse-temurin-17 AS build
+WORKDIR /workspace
+
+COPY pom.xml .
+RUN mvn -q -DskipTests dependency:go-offline
+
+COPY src ./src
+RUN mvn -q -DskipTests clean package
+
+# Run stage
 FROM eclipse-temurin:21-jre
 WORKDIR /app
-COPY target/peaks-hikes-service-0.1.0.jar ./peaks-hikes-service.jar
+COPY --from=build /workspace/target/peaks-hikes-service-0.1.0.jar ./peaks-hikes-service.jar
+COPY src/main/resources/config.yaml ./config.yaml
 EXPOSE 8082
 CMD ["java", "-jar", "peaks-hikes-service.jar"]
