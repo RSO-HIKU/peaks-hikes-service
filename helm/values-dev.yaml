@@ -1,0 +1,14 @@
+replicaCount: 1
+
+image:
+  repository: peaks-hikes-service
+  tag: dev-latest
+  pullPolicy: Never
+
+service:
+  clusterIP:
+    port: 8082
+
+  nodePort:
+    port: 8082
+    nodePort: 30082

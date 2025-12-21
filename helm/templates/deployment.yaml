@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "peaks-hikes-service.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "peaks-hikes-service.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "peaks-hikes-service.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "peaks-hikes-service.selectorLabels" . | nindent 8 }}
+    spec:
+      containers:
+        - name: peaks-hikes-service
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.service.clusterIP.port }}
