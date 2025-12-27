@@ -11,6 +11,6 @@ public class Hello {
     @Produces(MediaType.TEXT_PLAIN)
     public String sayHello() {
         System.out.println("Hello endpoint was called");
-        return "Hello, Peaks and Hikes Service!";
+        return "Hello, Peaks and Hikes Service! :-) ";
     }
 }

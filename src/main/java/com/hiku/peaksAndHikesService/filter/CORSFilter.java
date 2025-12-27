@@ -1,4 +1,4 @@
-package com.hiku.peaksAndHikesService.controller;
+package com.hiku.peaksAndHikesService.filter;
 
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
