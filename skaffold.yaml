@@ -12,6 +12,10 @@ build:
       context: .
       docker:
         dockerfile: Dockerfile
+    - image: peaks-hikes-service-migrator
+      context: .
+      docker:
+        dockerfile: Dockerfile.migrator
 deploy:
   helm:
     releases:
@@ -24,6 +28,8 @@ deploy:
         setValueTemplates:
           image.repository: "{{.IMAGE_REPO_peaks_hikes_service}}"
           image.tag: "{{.IMAGE_TAG_peaks_hikes_service}}"
+          flyway.image.repository: "{{.IMAGE_REPO_peaks_hikes_service_migrator}}"
+          flyway.image.tag: "{{.IMAGE_TAG_peaks_hikes_service_migrator}}"
         wait: true
 portForward:
   - resourceType: service
