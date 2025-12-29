@@ -12,3 +12,8 @@ service:
   nodePort:
     port: 8082
     nodePort: 30082
+
+flyway:
+  image:
+    repository: peaks-hikes-service-migrator
+    tag: "dev"
