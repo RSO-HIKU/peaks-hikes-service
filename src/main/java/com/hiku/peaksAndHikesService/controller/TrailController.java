@@ -1,7 +1,7 @@
 package com.hiku.peaksAndHikesService.controller;
 
-import com.hiku.peaksAndHikesService.db.dao.TrailDao;
 import com.hiku.peaksAndHikesService.db.models.Trail;
+import com.hiku.peaksAndHikesService.service.TrailService;
 
 import org.locationtech.jts.geom.Coordinate;
 import org.locationtech.jts.geom.LineString;
@@ -49,20 +49,12 @@ import java.util.stream.Collectors;
 public class TrailController {
     
     @Inject
-    private TrailDao trailDao;
+    private TrailService trailService;
         
     @GET
     public Response getTrails(@QueryParam("query") String query) {
         try {
-            List<Trail> trails;
-            
-            // If query is empty or null, return all trails
-            if (query == null || query.trim().isEmpty()) {
-                trails = trailDao.findAllTrails();
-            } else {
-                // Otherwise, search by name
-                trails = trailDao.searchTrailsByName(query);
-            }
+            List<Trail> trails = trailService.getTrails(query);
             
             List<TrailDto> dto = trails.stream()
                     .map(TrailDto::fromEntity)

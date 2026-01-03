@@ -8,6 +8,7 @@ image:
 service:
   clusterIP:
     port: 8082
+    grpcPort: 9090
 
   nodePort:
     port: 8082

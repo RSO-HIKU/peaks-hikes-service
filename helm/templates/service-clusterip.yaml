@@ -12,3 +12,7 @@ spec:
   ports:
     - port: {{ .Values.service.clusterIP.port }}
       targetPort: {{ .Values.service.clusterIP.port }}
+      name: http
+    - port: {{ .Values.service.clusterIP.grpcPort }}
+      targetPort: {{ .Values.service.clusterIP.grpcPort }}
+      name: grpc

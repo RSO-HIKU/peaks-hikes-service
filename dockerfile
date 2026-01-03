@@ -6,6 +6,7 @@ COPY pom.xml .
 RUN mvn -q -DskipTests dependency:go-offline
 
 COPY src ./src
+COPY src/main/proto ./src/main/proto
 RUN mvn -q -DskipTests clean package
 
 # Run stage
