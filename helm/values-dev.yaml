@@ -5,12 +5,23 @@ image:
   tag: dev-latest
   pullPolicy: Never
 
+database:
+  enabled: true
+  host: postgres.database.svc.cluster.local
+  port: "5432"
+  name: hikudb
+  schema: peaks_hikes_service
+
+azure:
+  enabled: false
+
 service:
   clusterIP:
     port: 8082
     grpcPort: 9090
 
   nodePort:
+    enabled: true
     port: 8082
     nodePort: 30082
 
@@ -18,3 +29,7 @@ flyway:
   image:
     repository: peaks-hikes-service-migrator
     tag: "dev"
+
+jwtAuth:
+  issuer: "http://localhost:8080/auth/realms/hiku-dev"
+  jwksUri: "http://keycloak.keycloak.svc.cluster.local:8080/auth/realms/hiku-dev/protocol/openid-connect/certs"
