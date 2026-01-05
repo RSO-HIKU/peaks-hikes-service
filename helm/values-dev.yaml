@@ -1,5 +1,7 @@
 replicaCount: 1
 
+environment: dev
+
 image:
   repository: peaks-hikes-service
   tag: dev-latest
@@ -19,6 +21,7 @@ service:
   clusterIP:
     port: 8082
     grpcPort: 9090
+    address: "0.0.0.0"
 
   nodePort:
     enabled: true
