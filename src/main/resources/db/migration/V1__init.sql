@@ -1,1 +1,0 @@
-CREATE SCHEMA IF NOT EXISTS peaks_hikes_service;

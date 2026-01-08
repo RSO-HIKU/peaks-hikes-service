@@ -7,6 +7,8 @@
     <persistence-unit name="peaksHikesPU" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
+        <non-jta-data-source>jdbc/HikuDS</non-jta-data-source>
+
         <class>com.hiku.peaksAndHikesService.models.Trail</class>
 
         <properties>
