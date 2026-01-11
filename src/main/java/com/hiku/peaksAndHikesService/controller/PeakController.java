@@ -5,6 +5,7 @@ import com.hiku.peaksAndHikesService.service.PeakService;
 
 import org.locationtech.jts.geom.Point;
 
+import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
 
 import javax.inject.Inject;
@@ -64,6 +65,7 @@ public class PeakController {
     }
 
     @GET
+    @PermitAll
     @Path("/{id}")
     public Response getPeakById(@PathParam("id") long id) {
         try {
