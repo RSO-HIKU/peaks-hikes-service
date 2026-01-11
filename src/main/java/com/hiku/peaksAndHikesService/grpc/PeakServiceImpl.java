@@ -16,7 +16,7 @@ import javax.json.JsonReader;
 public class PeakServiceImpl extends PeakServiceGrpc.PeakServiceImplBase {
 
     private static final Logger logger = Logger.getLogger(PeakServiceImpl.class.getName());
-    private static final String INTERNAL_ENDPOINT = "http://localhost:8082/getpeaks/";
+    private static final String INTERNAL_ENDPOINT = System.getenv("GRPC_INTERNAL_ENDPOINT") != null ? System.getenv("GRPC_INTERNAL_ENDPOINT") : "http://localhost:8082/getpeaks/";
 
     @Override
     public void getPeakById(PeakRequest request, StreamObserver<PeakResponse> responseObserver) {
