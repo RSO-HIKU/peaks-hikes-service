@@ -1,0 +1,425 @@
+{
+	"info": {
+		"_postman_id": "07d82acc-aea5-480b-a314-bcddd2ada9aa",
+		"name": "HIKU",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40015610",
+		"_collection_link": "https://hiku99.postman.co/workspace/HIKU~a6a05134-9dee-4d54-81a0-4bc7685fcc34/collection/40015610-07d82acc-aea5-480b-a314-bcddd2ada9aa?action=share&source=collection_link&creator=40015610"
+	},
+	"item": [
+		{
+			"name": "Peaks and Hikes Service",
+			"item": [
+				{
+					"name": "health check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/peaks-hikes/health",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"peaks-hikes",
+								"health"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "health check",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/api/peaks-hikes/health",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"peaks-hikes",
+										"health"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, content-type, accept, authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "252"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jan 2026 16:05:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(10.0.9)"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "KumuluzEE/4.1.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"UP\",\n    \"service\": \"peaks-hikes-service\",\n    \"timestamp\": \"2026-01-11T16:05:34.367632920Z\",\n    \"checks\": [\n        {\n            \"name\": \"database\",\n            \"status\": \"UP\",\n            \"message\": \"Database connection OK\"\n        },\n        {\n            \"name\": \"memory\",\n            \"status\": \"UP\",\n            \"message\": \"Heap usage: 5.8% (114 MB / 1986 MB)\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "health check",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/api/peaks-hikes/health",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"peaks-hikes",
+										"health"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, content-type, accept, authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "251"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jan 2026 17:02:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(10.0.9)"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "KumuluzEE/4.1.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"UP\",\n    \"service\": \"peaks-hikes-service\",\n    \"timestamp\": \"2026-01-11T17:02:21.098261670Z\",\n    \"checks\": [\n        {\n            \"name\": \"database\",\n            \"status\": \"UP\",\n            \"message\": \"Database connection OK\"\n        },\n        {\n            \"name\": \"memory\",\n            \"status\": \"UP\",\n            \"message\": \"Heap usage: 4.9% (96 MB / 1986 MB)\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get all peaks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/peaks-hikes/getpeaks",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"peaks-hikes",
+								"getpeaks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all peaks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/api/peaks-hikes/getpeaks",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"peaks-hikes",
+										"getpeaks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, content-type, accept, authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "179"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jan 2026 16:04:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(10.0.9)"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "KumuluzEE/4.1.0"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"elevationM\": 1025,\n        \"geometry\": {\n            \"coordinates\": [\n                14.261172,\n                46.17104\n            ],\n            \"type\": \"Point\"\n        },\n        \"id\": 1,\n        \"latitude\": 46.17104,\n        \"longitude\": 14.261172,\n        \"name\": \"Lubnik\",\n        \"territory\": \"Škofjeloško\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get all trails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/peaks-hikes/gettrails",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"peaks-hikes",
+								"gettrails"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all trails",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/api/peaks-hikes/gettrails",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"peaks-hikes",
+										"gettrails"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "origin, content-type, accept, authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST, PUT, DELETE, OPTIONS, HEAD"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3727"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jan 2026 16:05:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(10.0.9)"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "KumuluzEE/4.1.0"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"geometry\": {\n            \"coordinates\": [\n                [\n                    14.284544339,\n                    46.171961996\n                ],\n                [\n                    14.284423991,\n                    46.17179029\n                ],\n                [\n                    14.284671962,\n                    46.171570116\n                ],\n                [\n                    14.284796765,\n                    46.171400243\n                ],\n                [\n                    14.284849775,\n                    46.171161386\n                ],\n                [\n                    14.284775233,\n                    46.170839124\n                ],\n                [\n                    14.284791384,\n                    46.170679284\n                ],\n                [\n                    14.284753682,\n                    46.170508823\n                ],\n                [\n                    14.284838986,\n                    46.170360117\n                ],\n                [\n                    14.28483904,\n                    46.170222664\n                ],\n                [\n                    14.284737477,\n                    46.170144858\n                ],\n                [\n                    14.284211971,\n                    46.170126189\n                ],\n                [\n                    14.283809544,\n                    46.170107563\n                ],\n                [\n                    14.283535558,\n                    46.170059052\n                ],\n                [\n                    14.283278603,\n                    46.169977538\n                ],\n                [\n                    14.283085484,\n                    46.169843804\n                ],\n                [\n                    14.282908525,\n                    46.169639107\n                ],\n                [\n                    14.282843828,\n                    46.169323723\n                ],\n                [\n                    14.282849263,\n                    46.169059898\n                ],\n                [\n                    14.283331604,\n                    46.168598942\n                ],\n                [\n                    14.283508635,\n                    46.168316474\n                ],\n                [\n                    14.283540965,\n                    46.167997369\n                ],\n                [\n                    14.283519397,\n                    46.167614736\n                ],\n                [\n                    14.283391818,\n                    46.167112059\n                ],\n                [\n                    14.283349588,\n                    46.166891805\n                ],\n                [\n                    14.283325325,\n                    46.166747469\n                ],\n                [\n                    14.283204097,\n                    46.16664359\n                ],\n                [\n                    14.283199561,\n                    46.166467499\n                ],\n                [\n                    14.283113376,\n                    46.166157043\n                ],\n                [\n                    14.283116961,\n                    46.166009625\n                ],\n                [\n                    14.282743261,\n                    46.166108541\n                ],\n                [\n                    14.282646252,\n                    46.166078671\n                ],\n                [\n                    14.282451309,\n                    46.166133451\n                ],\n                [\n                    14.282183584,\n                    46.16627838\n                ],\n                [\n                    14.282126972,\n                    46.166203704\n                ],\n                [\n                    14.281836834,\n                    46.166341223\n                ],\n                [\n                    14.281713783,\n                    46.166369829\n                ],\n                [\n                    14.281652698,\n                    46.166315086\n                ],\n                [\n                    14.281588037,\n                    46.166303869\n                ],\n                [\n                    14.281473906,\n                    46.166359265\n                ],\n                [\n                    14.281336446,\n                    46.166459455\n                ],\n                [\n                    14.281148698,\n                    46.166503602\n                ],\n                [\n                    14.280863043,\n                    46.166506072\n                ],\n                [\n                    14.280724738,\n                    46.166498612\n                ],\n                [\n                    14.280626786,\n                    46.166527218\n                ],\n                [\n                    14.28056305,\n                    46.166662235\n                ],\n                [\n                    14.280478573,\n                    46.166728798\n                ],\n                [\n                    14.279950399,\n                    46.166794782\n                ],\n                [\n                    14.279874016,\n                    46.166931634\n                ],\n                [\n                    14.279695296,\n                    46.166968962\n                ],\n                [\n                    14.279650344,\n                    46.166945924\n                ],\n                [\n                    14.279447361,\n                    46.167075341\n                ],\n                [\n                    14.279255948,\n                    46.167105819\n                ],\n                [\n                    14.27904037,\n                    46.167261365\n                ],\n                [\n                    14.27889398,\n                    46.167239591\n                ],\n                [\n                    14.278719653,\n                    46.167313618\n                ],\n                [\n                    14.278567901,\n                    46.167252033\n                ],\n                [\n                    14.278267855,\n                    46.167403218\n                ],\n                [\n                    14.278168142,\n                    46.167362151\n                ],\n                [\n                    14.277801647,\n                    46.167456111\n                ],\n                [\n                    14.277653389,\n                    46.167628441\n                ],\n                [\n                    14.277473726,\n                    46.167728585\n                ],\n                [\n                    14.277420725,\n                    46.167829364\n                ],\n                [\n                    14.276939219,\n                    46.167756581\n                ],\n                [\n                    14.276623902,\n                    46.167647068\n                ],\n                [\n                    14.276429875,\n                    46.167620982\n                ],\n                [\n                    14.276278958,\n                    46.167548174\n                ],\n                [\n                    14.276126217,\n                    46.167555615\n                ],\n                [\n                    14.275934903,\n                    46.167572444\n                ],\n                [\n                    14.275397719,\n                    46.167346604\n                ],\n                [\n                    14.274759898,\n                    46.167095274\n                ],\n                [\n                    14.274608963,\n                    46.166982033\n                ],\n                [\n                    14.274052906,\n                    46.166894921\n                ],\n                [\n                    14.273814879,\n                    46.16682401\n                ],\n                [\n                    14.273562479,\n                    46.166813453\n                ],\n                [\n                    14.273439365,\n                    46.166774214\n                ],\n                [\n                    14.27318428,\n                    46.16674559\n                ],\n                [\n                    14.272868944,\n                    46.166588219\n                ],\n                [\n                    14.272707292,\n                    46.166564566\n                ],\n                [\n                    14.272080241,\n                    46.166229834\n                ],\n                [\n                    14.271877186,\n                    46.166193146\n                ],\n                [\n                    14.27145142,\n                    46.16608241\n                ],\n                [\n                    14.270882778,\n                    46.165979762\n                ],\n                [\n                    14.270363597,\n                    46.166075592\n                ],\n                [\n                    14.269778739,\n                    46.166269682\n                ],\n                [\n                    14.269563153,\n                    46.166412147\n                ],\n                [\n                    14.269366458,\n                    46.16655957\n                ],\n                [\n                    14.269105883,\n                    46.166683388\n                ],\n                [\n                    14.268957715,\n                    46.166669104\n                ],\n                [\n                    14.268803187,\n                    46.166596326\n                ],\n                [\n                    14.268563328,\n                    46.166585712\n                ],\n                [\n                    14.268205807,\n                    46.166695825\n                ],\n                [\n                    14.268057612,\n                    46.166677154\n                ],\n                [\n                    14.267439535,\n                    46.166839533\n                ],\n                [\n                    14.266955316,\n                    46.166768652\n                ],\n                [\n                    14.266298711,\n                    46.166684664\n                ],\n                [\n                    14.265773134,\n                    46.166810914\n                ],\n                [\n                    14.265601564,\n                    46.16698138\n                ],\n                [\n                    14.265258453,\n                    46.167018733\n                ],\n                [\n                    14.264742829,\n                    46.1674275\n                ],\n                [\n                    14.264367324,\n                    46.167546308\n                ],\n                [\n                    14.264078022,\n                    46.167769017\n                ],\n                [\n                    14.263680957,\n                    46.167977461\n                ],\n                [\n                    14.263383633,\n                    46.168294103\n                ],\n                [\n                    14.263345005,\n                    46.168473274\n                ],\n                [\n                    14.263459109,\n                    46.168685428\n                ],\n                [\n                    14.263105173,\n                    46.169015772\n                ],\n                [\n                    14.262995552,\n                    46.169006415\n                ],\n                [\n                    14.262933586,\n                    46.169275771\n                ],\n                [\n                    14.262710795,\n                    46.169474883\n                ],\n                [\n                    14.262313721,\n                    46.1698139\n                ],\n                [\n                    14.261866423,\n                    46.169869273\n                ],\n                [\n                    14.261366969,\n                    46.169924665\n                ],\n                [\n                    14.261233048,\n                    46.170034168\n                ],\n                [\n                    14.261030065,\n                    46.170197146\n                ],\n                [\n                    14.260807247,\n                    46.170393698\n                ],\n                [\n                    14.261121693,\n                    46.170413014\n                ],\n                [\n                    14.261548393,\n                    46.170434153\n                ],\n                [\n                    14.261618497,\n                    46.170511281\n                ],\n                [\n                    14.261481953,\n                    46.170566678\n                ],\n                [\n                    14.261228619,\n                    46.170639438\n                ],\n                [\n                    14.2610256,\n                    46.170799933\n                ],\n                [\n                    14.261125295,\n                    46.170852188\n                ],\n                [\n                    14.26133639,\n                    46.170808636\n                ],\n                [\n                    14.261433417,\n                    46.170804922\n                ],\n                [\n                    14.261397476,\n                    46.170844711\n                ],\n                [\n                    14.261156718,\n                    46.170938074\n                ],\n                [\n                    14.261064183,\n                    46.170992794\n                ]\n            ],\n            \"type\": \"LineString\"\n        },\n        \"id\": 1,\n        \"lengthKm\": 3.14,\n        \"name\": \"Vester-Lubnik (grebenska pot)2\",\n        \"sourceFile\": \"Vester-Lubnik (grebenska pot).gpx\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get peak id 1",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "tokenType",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "accessToken",
+				"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJXVmo4V3U3SEtpLXBaZ25ibGh2M2EzaWFfWVlMd1k4SEVKZlM2UXVEa3ZNIn0.eyJleHAiOjE3NjgxNTE3MjksImlhdCI6MTc2ODE1MTQyOSwiYXV0aF90aW1lIjoxNzY4MTUwOTE2LCJqdGkiOiJmNDViZGEzYS1lMGM1LTQwN2MtYjFlMC1kMmRlNzk2MTViMzgiLCJpc3MiOiJodHRwczovL3RyYWVmaWstaGlrdS10ZXN0LnBvbGFuZGNlbnRyYWwuY2xvdWRhcHAuYXp1cmUuY29tL2F1dGgvcmVhbG1zL2hpa3UtdGVzdCIsImF1ZCI6WyJyZWFsbS1tYW5hZ2VtZW50IiwiYWNjb3VudCJdLCJzdWIiOiI2ODk1YTBmOS04Y2VlLTRlM2ItYjI0Ni1hYTYwYjgyMTcxOGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJoaWt1LXdlYiIsInNpZCI6ImRkOTU0MzMyLTZjNjAtNGUxMS05ZjY4LTg2MmY5ZjZkODZmZSIsImFjciI6IjAiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9zdHdlYmhpa3V0ZXN0cGxjLnozNi53ZWIuY29yZS53aW5kb3dzLm5ldCIsImh0dHBzOi8vb2F1dGgucHN0bW4uaW8iLCIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1oaWt1LWRldiIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiIsInVzZXIiXX0sInJlc291cmNlX2FjY2VzcyI6eyJyZWFsbS1tYW5hZ2VtZW50Ijp7InJvbGVzIjpbInZpZXctcmVhbG0iLCJ2aWV3LWlkZW50aXR5LXByb3ZpZGVycyIsIm1hbmFnZS1pZGVudGl0eS1wcm92aWRlcnMiLCJpbXBlcnNvbmF0aW9uIiwicmVhbG0tYWRtaW4iLCJjcmVhdGUtY2xpZW50IiwibWFuYWdlLXVzZXJzIiwicXVlcnktcmVhbG1zIiwidmlldy1hdXRob3JpemF0aW9uIiwicXVlcnktY2xpZW50cyIsInF1ZXJ5LXVzZXJzIiwibWFuYWdlLWV2ZW50cyIsIm1hbmFnZS1yZWFsbSIsInZpZXctZXZlbnRzIiwidmlldy11c2VycyIsInZpZXctY2xpZW50cyIsIm1hbmFnZS1hdXRob3JpemF0aW9uIiwibWFuYWdlLWNsaWVudHMiLCJxdWVyeS1ncm91cHMiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCBtaWNyb3Byb2ZpbGUtand0IiwidXBuIjoidGVzdGFkbWluIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJ0ZXN0IGFkbWluIiwiZ3JvdXBzIjpbImRlZmF1bHQtcm9sZXMtaGlrdS1kZXYiLCJvZmZsaW5lX2FjY2VzcyIsImFkbWluIiwidW1hX2F1dGhvcml6YXRpb24iLCJ1c2VyIl0sInByZWZlcnJlZF91c2VybmFtZSI6InRlc3RhZG1pbiIsImdpdmVuX25hbWUiOiJ0ZXN0IiwiZmFtaWx5X25hbWUiOiJhZG1pbiIsImVtYWlsIjoidEBtYWlsLmNvbSJ9.a_92BpB681bEN8wVHIxp49axRkE1wBpZ8tPOSJ6gJQnDbaG9hwTfrOGUXsyf_PJRc9xPr6vXFp1gvm5vjMqq5eGMnK9UKsdUazQS_kzxhui5ZG_RrNFZ0zbRl-6SvkQqIRn2a7PEXjV1jX8VXWhIoJxUc0HhPONTPEkCCZU1BQsYzj6OnfpTZc1OYGcxBNYCxPoTjQLZGlgcUgCk8OR53fSdv4OguwKwXXsSJ3BoACaLLaFNSo-TLSM1kL4tzhnyCqqNnMf8ZSgkWHwZ9TjV88tsTkeszzWJDO1HapAcW8baR27OMHOJgEpj3XfFm-HrvppG1rJiV0eV2vLbP7y_1g",
+				"type": "string"
+			},
+			{
+				"key": "useBrowser",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://traefik-hiku-test.polandcentral.cloudapp.azure.com/auth/realms/hiku-test/protocol/openid-connect/auth",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "hiku-web",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://traefik-hiku-test.polandcentral.cloudapp.azure.com/auth/realms/hiku-test/protocol/openid-connect/token",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "https://oauth.pstmn.io/v1/browser-callback",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code_with_pkce",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://traefik-hiku-test.polandcentral.cloudapp.azure.com"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJXVmo4V3U3SEtpLXBaZ25ibGh2M2EzaWFfWVlMd1k4SEVKZlM2UXVEa3ZNIn0.eyJleHAiOjE3NjgxMzMwMjcsImlhdCI6MTc2ODEzMjcyNywiYXV0aF90aW1lIjoxNzY4MTMyNzI2LCJqdGkiOiJkNGFmOWE1OS1kMTdjLTQxYmMtYTVlZC01ZTYzYzJkNmI2YmQiLCJpc3MiOiJodHRwczovL3RyYWVmaWstaGlrdS10ZXN0LnBvbGFuZGNlbnRyYWwuY2xvdWRhcHAuYXp1cmUuY29tL2F1dGgvcmVhbG1zL2hpa3UtdGVzdCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJiZDkyN2QyYS00YWY2LTQ2MDItYWI3NC1jY2E4ZTEwNmYxZjciLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJoaWt1LXdlYiIsInNpZCI6IjQ5ZDY4Y2EyLWU1NTktNGJlMS04OGQ2LTdkYjdkMmVlMTNiYyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9zdHdlYmhpa3V0ZXN0cGxjLnozNi53ZWIuY29yZS53aW5kb3dzLm5ldCIsImh0dHBzOi8vb2F1dGgucHN0bW4uaW8iLCIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1oaWt1LWRldiIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iLCJ1c2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIG1pY3JvcHJvZmlsZS1qd3QiLCJ1cG4iOiJuaW5hIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoibmluYSBub3ZhayIsImdyb3VwcyI6WyJkZWZhdWx0LXJvbGVzLWhpa3UtZGV2Iiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsInVzZXIiXSwicHJlZmVycmVkX3VzZXJuYW1lIjoibmluYSIsImdpdmVuX25hbWUiOiJuaW5hIiwiZmFtaWx5X25hbWUiOiJub3ZhayIsImVtYWlsIjoibWFuY2F2YXZwb3RpY0BnbWFpbC5jb20ifQ.Qj43GaPExna7vDK5CCYQz5AqKL2t5pMEDekU5_o0WK3mOWhBW8u5kg4OeTf3siSF8Ckgf9c6AM0ZoUIe3H1rHHeBeTHMzhqFOqatR-4kKbDLDF-h0nP8ZTYRuxRbIPaoaCpHw6ZW1sEIv2xxhlDHVq4sfURtmpfAVNvPJXRIBm22QKHx6_VfzOLuoLlsVSi01jjJ9zKxzp4InprYJRqH7L9Oih_392thz3QXaY3zjQfNvm8Io-FkbCwgYichEWNY43cAxe8_6KbrkOpWVje0WxiIQQHcyRPZT8kqCqKnka1FPNXrZQr4hcGkqxSx6Ki56bWyzOc7Funr96ZCsUSJMg"
+		},
+		{
+			"key": "userId",
+			"value": "bd927d2a-4af6-4602-ab74-cca8e106f1f7"
+		},
+		{
+			"key": "followUserId",
+			"value": "8e93bfd1-3a0b-479a-a041-071b92be00ec"
+		}
+	]
+}
