@@ -86,6 +86,31 @@ spec:
             - name: KUMULUZEE_JWT_AUTH_JWKS_URI
               value: {{ .Values.jwtAuth.jwksUri | quote }}
             {{- end }}
+          # Kubernetes Health Probes
+          startupProbe:
+            httpGet:
+              path: /api/peaks-hikes/health/live
+              port: {{ .Values.service.clusterIP.port }}
+            initialDelaySeconds: {{ .Values.health.startup.initialDelaySeconds | default 5 }}
+            periodSeconds: {{ .Values.health.startup.periodSeconds | default 3 }}
+            timeoutSeconds: {{ .Values.health.startup.timeoutSeconds | default 2 }}
+            failureThreshold: {{ .Values.health.startup.failureThreshold | default 10 }}
+          livenessProbe:
+            httpGet:
+              path: /api/peaks-hikes/health/live
+              port: {{ .Values.service.clusterIP.port }}
+            initialDelaySeconds: {{ .Values.health.liveness.initialDelaySeconds | default 0 }}
+            periodSeconds: {{ .Values.health.liveness.periodSeconds | default 10 }}
+            timeoutSeconds: {{ .Values.health.liveness.timeoutSeconds | default 3 }}
+            failureThreshold: {{ .Values.health.liveness.failureThreshold | default 3 }}
+          readinessProbe:
+            httpGet:
+              path: /api/peaks-hikes/health/ready
+              port: {{ .Values.service.clusterIP.port }}
+            initialDelaySeconds: {{ .Values.health.readiness.initialDelaySeconds | default 0 }}
+            periodSeconds: {{ .Values.health.readiness.periodSeconds | default 5 }}
+            timeoutSeconds: {{ .Values.health.readiness.timeoutSeconds | default 3 }}
+            failureThreshold: {{ .Values.health.readiness.failureThreshold | default 3 }}
           {{- with .Values.resources }}
           resources:
             {{- toYaml . | nindent 12 }}

@@ -5,6 +5,8 @@ import com.hiku.peaksAndHikesService.service.PeakService;
 
 import org.locationtech.jts.geom.Point;
 
+import javax.annotation.security.RolesAllowed;
+
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -36,6 +38,7 @@ import java.util.stream.Collectors;
  * expected by mapping libraries like Mapbox.
  */
 @Path("/getpeaks")
+@RolesAllowed("user")
 @Produces(MediaType.APPLICATION_JSON)
 public class PeakController {
     

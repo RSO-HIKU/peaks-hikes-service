@@ -6,6 +6,7 @@ import com.hiku.peaksAndHikesService.service.TrailService;
 import org.locationtech.jts.geom.Coordinate;
 import org.locationtech.jts.geom.LineString;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -45,6 +46,7 @@ import java.util.stream.Collectors;
  */
 
 @Path("/gettrails")
+@RolesAllowed("user")
 @Produces(MediaType.APPLICATION_JSON)
 public class TrailController {
     
